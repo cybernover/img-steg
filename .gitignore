@@ -1,6 +1,5 @@
 # Uploaded files
-modes/Text/static/*
-!modes/Text/static
+#modes/Text/static/*
 
 # env
-./env/
+env/*
