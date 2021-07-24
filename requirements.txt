@@ -1,15 +1,4 @@
-certifi
-click
-colorama
-crayons
 Flask
-itsdangerous
-Jinja2
-MarkupSafe
-numpy
-opencv-python
-piexif
 Pillow
 stepic
 Werkzeug
-wincertstore 

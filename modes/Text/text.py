@@ -4,7 +4,6 @@ import stepic
 import shutil
 from flask import Blueprint, current_app, render_template, url_for, redirect, request, session, flash
 from datetime import timedelta
-# from flask_wtf import FlaskForm
 from werkzeug.utils import secure_filename
 
 text = Blueprint("text", __name__, static_folder="static",
@@ -20,7 +19,6 @@ def text_encode():
         print("Not Found")
 
     if os.path.exists(os.path.join(current_app.config['UPLOAD_TEXT_FOLDER'], "encrypted_text_image.png")):
-        # print("Found")
         os.remove(os.path.join(
             current_app.config['UPLOAD_TEXT_FOLDER'], "encrypted_text_image.png"))
     else:
@@ -79,8 +77,6 @@ def text_decode_result():
         return render_template("decode-text-result.html", result=result, file=file, text_decryption=text_decryption, message=message)
 
 # Encryption function
-
-
 def encrypt_text(image_1, message):
     im = Image.open(image_1)
 
@@ -89,8 +85,6 @@ def encrypt_text(image_1, message):
         current_app.config['UPLOAD_TEXT_FOLDER'], "encrypted_text_image.png"))
 
 # Decryption function
-
-
 def decrypt_text(image_1):
     im2 = Image.open(image_1)
     stegoImage = stepic.decode(im2)
