@@ -2,10 +2,8 @@ from flask import Flask, render_template
 
 from modes.Text.text import text
 
-
-
-UPLOAD_TEXT_FOLDER = 'modes\\Text\\static'
-TEXT_CACHE_FOLDER = 'modes\\Text\\__pycache__'
+UPLOAD_TEXT_FOLDER = 'modes/Text/static'
+TEXT_CACHE_FOLDER = 'modes/Text/__pycache__'
 
 
 app = Flask(__name__)
